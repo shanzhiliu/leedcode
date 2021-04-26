@@ -12,4 +12,13 @@ public class SolutionTest {
 
     }
 
+    @Test
+    public void  test2(){
+
+        Solution1 solution = new Solution1();
+        System.out.println(solution.lengthOfLongestSubstring("aab"));
+
+    }
+
+
 }

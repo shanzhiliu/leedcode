@@ -39,8 +39,10 @@ class Solution1 {
                 l2=l2.next;
             }
 
-            int target =  (value1 + value2 + carryValue) % 10;
-            carryValue = (value1 + value2 + carryValue) / 10;
+            int sum = value1 + value2 + carryValue;
+
+            int target =  sum % 10;
+            carryValue = sum / 10;
 
             ListNode temp = new ListNode(target);
             head.next = temp;

@@ -40,6 +40,7 @@ class Solution1 {
             //第三次,返回到上层节点.
             else  if(countMap.get(cuTree) == 2){
                 result.add(cuTree.val);
+                //抛弃当前节点
                 cuTree = stack.pop();
 
                 //是否有上层节点

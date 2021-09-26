@@ -1,5 +1,8 @@
 package number_872;
 
+import util.TreeNode;
+import util.TreeNodeUtil;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -62,8 +65,11 @@ class Solution {
         TreeNode right5 = new TreeNode(5,right6,right7);
         TreeNode right3 = new TreeNode(3,right5,right1);
 
+        TreeNode left = TreeNodeUtil.getRootNode(new Integer[]{3,5,1,6,2,9,8,null,null,7,4});
+        TreeNode right = TreeNodeUtil.getRootNode(new Integer[]{3,5,1,6,7,4,2,null,null,null,null,null,null,9,8});
+
         Solution solution = new Solution();
-        System.out.println(solution.leafSimilar(left3,right3));
+        System.out.println(solution.leafSimilar(left,right));
 
     }
 

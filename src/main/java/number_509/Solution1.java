@@ -1,25 +1,21 @@
 package number_509;
 
+import javax.swing.*;
+
 class Solution1 {
+
     public int fib(int n) {
+        if(n < 2) return  n;
 
-        Integer count =  getFib(n);
-        return  count;
-    }
+        int[] F = new int[n + 1];
 
-    private Integer getFib(int n) {
-        if(n <= 1)  return n;
+        F[0] = 0;
+        F[1] = 1;
 
-        int first = 0;
-        int second = 1;
-        Integer count = 0;
-        for (int i = 2; i <= n; i++) {
-            count = first + second;
-            first = second;
-            second = count;
+        for (int i = 2; i < n + 1 ; i++) {
+            F[i] = F[i - 1] + F[i - 2];
         }
-        return count;
+
+        return F[n];
     }
-
-
 }
